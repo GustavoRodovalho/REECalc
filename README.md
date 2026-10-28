@@ -38,23 +38,25 @@ The notebook mounts Google Drive and reads an Excel workbook using
 data = pd.read_excel("/content/drive/MyDrive/Monazita.xlsx")
 ```
 
-![Figure 1 — Excel input worksheet structure](prints/excel_input_structure.jpeg)
-
-*Figure 1. Expected Excel worksheet layout for REECalc:
-oxide names, corresponding elements, elemental and molecular
-weights, followed by the sample analyses.*
-
 **Update this path to match your own workbook.** The import is currently
 tailored to the structure of that spreadsheet: oxide names, element
 names, elemental weights, and molecular weights are read from the first
 rows, and sample compositions are transposed into a sample-by-oxide
 table. It is **not yet a generic Excel importer**.
 
+![Figure 1 — Excel input worksheet structure](prints/excel_input_structure.jpeg)
+
+*Figure 1. Expected Excel worksheet layout for REECalc:
+oxide names, corresponding elements, elemental and molecular
+weights, followed by the sample analyses.*
+
 ### 2. Convert to molar proportions
 
 For each oxide, the notebook calculates:
 
-$\[ n_i = `\frac{w_i}{M_i}`{=tex} \]$
+$$
+\[ n_i = `\frac{w_i}{M_i}`{=tex} \]
+$$
 
 where (w_i) is the reported weight percentage and (M_i) is the molecular
 weight. These values are multiplied by the number of elements and oxygen
@@ -65,11 +67,15 @@ proportions. Fluorine and chlorine are handled as elements, not oxides.
 
 The notebook uses the following spreadsheet-derived convention:
 
-$\[ A = `\sum `{=tex}n\_{`\mathrm `{=tex}O} +
-`\frac{n_{\mathrm F} + n_{\mathrm {Cl}}}{2}`{=tex} \]$
+$$
+\[ A = `\sum `{=tex}n\_{`\mathrm `{=tex}O} +
+`\frac{n_{\mathrm F} + n_{\mathrm {Cl}}}{2}`{=tex} \]
+$$
 
-$\[ f = `\frac{4}{A}`{=tex}, `\qquad `{=tex}`\mathrm{apfu}`{=tex}\_i =
-n_i f \]$
+$$
+\[ f = `\frac{4}{A}`{=tex}, `\qquad `{=tex}`\mathrm{apfu}`{=tex}\_i =
+n_i f \]
+$$
 
 This normalization follows the **specific Excel calculation convention**
 used to develop the notebook. It should not be assumed to be universally
