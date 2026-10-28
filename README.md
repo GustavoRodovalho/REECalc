@@ -35,8 +35,14 @@ The notebook mounts Google Drive and reads an Excel workbook using
 `pandas.read_excel`. The current input path is:
 
 ``` python
-data = pd.read_excel("/content/drive/MyDrive/Ycles/Monazita.xlsx")
+data = pd.read_excel("/content/drive/MyDrive/Monazita.xlsx")
 ```
+
+![Figure 1 — Excel input worksheet structure](prints/excel_input_structure.jpeg)
+
+*Figure 1. Expected Excel worksheet layout for REECalc:
+oxide names, corresponding elements, elemental and molecular
+weights, followed by the sample analyses.*
 
 **Update this path to match your own workbook.** The import is currently
 tailored to the structure of that spreadsheet: oxide names, element
