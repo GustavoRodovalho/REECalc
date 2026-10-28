@@ -54,8 +54,10 @@ weights, followed by the sample analyses.*
 
 For each oxide, the notebook calculates:
 
+### Molar proportions
+
 $$
-\[ n_i = `\frac{w_i}{M_i}`{=tex} \]
+n_i = \frac{w_i}{M_i}
 $$
 
 where (w_i) is the reported weight percentage and (M_i) is the molecular
@@ -67,14 +69,22 @@ proportions. Fluorine and chlorine are handled as elements, not oxides.
 
 The notebook uses the following spreadsheet-derived convention:
 
-$$
-\[ A = `\sum `{=tex}n\_{`\mathrm `{=tex}O} +
-`\frac{n_{\mathrm F} + n_{\mathrm {Cl}}}{2}`{=tex} \]
-$$
+### Anion normalization
 
 $$
-\[ f = `\frac{4}{A}`{=tex}, `\qquad `{=tex}`\mathrm{apfu}`{=tex}\_i =
-n_i f \]
+A = \sum n_{\mathrm{O}} + \frac{n_{\mathrm{F}} + n_{\mathrm{Cl}}}{2}
+$$
+
+### Normalization factor
+
+$$
+f = \frac{4}{A}
+$$
+
+### Atoms per formula unit
+
+$$
+\mathrm{apfu}_i = n_i f
 $$
 
 This normalization follows the **specific Excel calculation convention**
