@@ -48,7 +48,7 @@ table. It is **not yet a generic Excel importer**.
 
 For each oxide, the notebook calculates:
 
-\[ n_i = `\frac{w_i}{M_i}`{=tex} \]
+$\[ n_i = `\frac{w_i}{M_i}`{=tex} \]$
 
 where (w_i) is the reported weight percentage and (M_i) is the molecular
 weight. These values are multiplied by the number of elements and oxygen
@@ -59,11 +59,11 @@ proportions. Fluorine and chlorine are handled as elements, not oxides.
 
 The notebook uses the following spreadsheet-derived convention:
 
-\[ A = `\sum `{=tex}n\_{`\mathrm `{=tex}O} +
-`\frac{n_{\mathrm F} + n_{\mathrm {Cl}}}{2}`{=tex} \]
+$\[ A = `\sum `{=tex}n\_{`\mathrm `{=tex}O} +
+`\frac{n_{\mathrm F} + n_{\mathrm {Cl}}}{2}`{=tex} \]$
 
-\[ f = `\frac{4}{A}`{=tex}, `\qquad `{=tex}`\mathrm{apfu}`{=tex}\_i =
-n_i f \]
+$\[ f = `\frac{4}{A}`{=tex}, `\qquad `{=tex}`\mathrm{apfu}`{=tex}\_i =
+n_i f \]$
 
 This normalization follows the **specific Excel calculation convention**
 used to develop the notebook. It should not be assumed to be universally
